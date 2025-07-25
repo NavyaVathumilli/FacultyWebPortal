@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: brown;
+  padding: 20px 10px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.navbar-search {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 1000;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}
