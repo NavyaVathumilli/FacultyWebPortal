@@ -14,11 +14,11 @@ function App() {
   return (
     <Router>
       <Navbar setSearchTerm={setSearchTerm} />
-      <All searchTerm={searchTerm} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<All searchTerm={searchTerm} />} />
+        <Route path="/all" element={<All searchTerm={searchTerm} />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/Faculty" element={<Faculty />} />
+        <Route path="/faculty" element={<All searchTerm={searchTerm} />} />
         <Route path="/dept" element={<Department />} />
       </Routes>
     </Router>

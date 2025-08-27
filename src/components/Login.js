@@ -12,9 +12,8 @@ const Login = ({ onBack }) => {
             </svg>
           </div>
           <h2 className="title">Faculty Login</h2>
-          <p className="subtitle">This portal is exclusively for faculty members only.</p>
           <div className="alert">
-            <p className="alert-text">⚠️ Students are not authorized to access this portal</p>
+            <p className="alert-text">⚠️ Students are not authorized to access this Login page</p>
           </div>
         </div>
 
@@ -34,16 +33,12 @@ const Login = ({ onBack }) => {
               <input id="remember-me" name="remember-me" type="checkbox" />
               <label htmlFor="remember-me">Remember me</label>
             </div>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="#" className="forgot-link">Forgot password?</a>
           </div>
 
           <button type="submit" className="submit-btn">Sign In</button>
         </form>
-
-        <div className="support">
-          <p>Need help? Contact <a href="#">IT Support</a></p>
-        </div>
-
         <button onClick={onBack} className="back-btn">Back to Faculty Directory</button>
       </div>
     </div>
