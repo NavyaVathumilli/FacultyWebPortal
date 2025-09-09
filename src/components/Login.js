@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 import './Login.css';
 
 const Login = ({ onBack }) => {
+  const { login } = useAuth(); // access login function from context
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const success = login(email, password); // call login from context
+    if (success) {
+      setError('');
+      // redirect to dashboard or department page
+      navigate('/facultydashboard'); 
+    } else {
+      setError('Invalid email or password. Please try again.');
+    }
+  };
+
+  const fillDemoCredentials = () => {
+    setEmail('john.doe@university.edu');
+    setPassword('password123');
+  };
+
   return (
     <div className="login-container">
       <div className="login-card">
@@ -17,28 +42,49 @@ const Login = ({ onBack }) => {
           </div>
         </div>
 
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Faculty Email</label>
-            <input id="email" name="email" type="email" required placeholder="Enter your faculty email" />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="Enter your faculty email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
           <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input id="password" name="password" type="password" required placeholder="Enter your password" />
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
+
+          {error && <p className="error-text">{error}</p>}
 
           <div className="form-footer">
             <div className="remember-me">
               <input id="remember-me" name="remember-me" type="checkbox" />
               <label htmlFor="remember-me">Remember me</label>
             </div>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="#" className="forgot-link">Forgot password?</a>
           </div>
 
           <button type="submit" className="submit-btn">Sign In</button>
+          <button type="button" onClick={fillDemoCredentials} className="demo-btn">
+            Fill Demo Credentials
+          </button>
         </form>
+
         <button onClick={onBack} className="back-btn">Back to Faculty Directory</button>
       </div>
     </div>

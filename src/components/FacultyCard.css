@@ -1,0 +1,78 @@
+.faculty-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  width: 280px;
+}
+
+.faculty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid brown;
+}
+
+.faculty-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.faculty-info {
+  text-align: center;
+}
+
+.faculty-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.faculty-designation {
+  font-size: 14px;
+  color: #333;
+}
+
+.faculty-department {
+  font-size: 14px;
+  color: #0066cc;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.faculty-availability {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.faculty-availability span {
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.available {
+  background: #d4f8d4;
+  color: green;
+}
+
+.busy {
+  background: #ffe0b3;
+  color: #b36b00;
+}
+
+.in-meeting {
+  background: #f8d4d4;
+  color: red;
+}
+
+.out-of-office {
+  background: #e0e0e0;
+  color: #555;
+}

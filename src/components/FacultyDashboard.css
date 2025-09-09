@@ -1,0 +1,259 @@
+/* FacultyDashboard.css */
+
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f9fafb, #ebf4ff);
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, brown, brown);
+  color: white;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-link {
+  background: brown;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.navbar-link:hover {
+  background: brown;
+}
+
+.welcome-text {
+  font-weight: 500;
+}
+
+/* Dashboard layout */
+.dashboard-inner {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.dashboard-header p {
+  color: #4b5563;
+  margin-top: 0.25rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Sidebar */
+.dashboard-sidebar .sidebar-card {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.profile-img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid brown;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.sidebar-nav li button.active-tab {
+  background: hsl(214, 100%, 97%);
+  color: brown;
+  border: 1px solid #bfdbfe;
+}
+
+/* Main content */
+.dashboard-main .main-card {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  padding: 2rem;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-header button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  background: brown;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.profile-header button:hover {
+  background: brown;
+}
+
+.edit-buttons button {
+  margin-left: 0.5rem;
+  background: brown;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-buttons button:hover {
+  background: brown;
+}
+
+/* Profile content */
+.profile-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.profile-image-section {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-large-img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid brown;
+}
+
+.availability-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.availability-label {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+/* Status colors */
+.available { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+.busy { background: #fef3c7; color: #78350f; border: 1px solid #fde68a; }
+.in-meeting { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+.out-of-office { background: #f3f4f6; color: #374151; border: 1px solid #d1d5db; }
+
+.dot-available { background: #22c55e; }
+.dot-busy { background: #facc15; }
+.dot-in-meeting { background: #ef4444; }
+.dot-out-of-office { background: #6b7280; }
+
+.profile-details {
+  flex: 2;
+  display: grid;
+  gap: 1rem;
+}
+
+.profile-details label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.profile-details input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.current-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.update-status .status-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 2px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.update-status .status-btn.active-status {
+  border-color: brown;
+  background: #eff6ff;
+  color: brown;
+}

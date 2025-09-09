@@ -1,73 +1,35 @@
 import React, { useState } from "react";
-import { Building2, X } from "lucide-react";
-import { facultyData, departments } from "./FacultyData";
+import { X } from "lucide-react";
+import { facultyData } from "./FacultyData";
 import FacultyCard from "./FacultyCard";   
-import "./Department.css";
+import "./FacultyList.css";
 
-const Department = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState(departments[0]);
+const FacultyList = () => {
   const [selectedFaculty, setSelectedFaculty] = useState(null);
 
-  // Filter faculty by selected department
-  const filteredFaculty = facultyData.filter(
-    (faculty) => faculty.department === selectedDepartment
-  );
-
   return (
-    <div className="department-container">
-      <div className="content">
-        {/* Left Sidebar - Departments */}
-        <div className="sidebar">
-          <h2>
-            <Building2 className="icon" /> Departments
-          </h2>
-          <div>
-            {departments.map((dept) => (
-              <button
-                key={dept}
-                onClick={() => setSelectedDepartment(dept)}
-                className={`dept-btn ${selectedDepartment === dept ? "active" : ""}`}
-              >
-                {dept}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Right Content - Faculty */}
-        <div className="faculty-section">
-          <h2>{selectedDepartment} Faculty</h2>
-          <p>
-            {filteredFaculty.length} faculty member{filteredFaculty.length !== 1 ? "s" : ""} found
-          </p>
-
-          <div className="faculty-grid">
-            {filteredFaculty.map((faculty) => (
-              <FacultyCard
-                key={faculty.id}
-                faculty={faculty}
-                onClick={() => setSelectedFaculty(faculty)}
-              />
-            ))}
-          </div>
-
-          {filteredFaculty.length === 0 && (
-            <div className="no-faculty">
-              <Building2 className="no-faculty-icon" />
-              <h3>No Faculty Found</h3>
-              <p>No faculty members found in the {selectedDepartment} department.</p>
-            </div>
-          )}
-        </div>
+    <div className="facultylist-container">
+      {/* Grid of cards */}
+      <div className="faculty-grid">
+        {facultyData.map((faculty) => (
+          <FacultyCard
+            key={faculty.id}
+            faculty={faculty}
+            onClick={() => setSelectedFaculty(faculty)}
+          />
+        ))}
       </div>
 
-      {/* Faculty Modal (like FacultyList.js) */}
+      {/* Modal */}
       {selectedFaculty && (
         <div className="modal-overlay">
           <div className="modal">
             <div className="modal-header">
               <h2>{selectedFaculty.name}</h2>
-              <button onClick={() => setSelectedFaculty(null)} className="close-btn">
+              <button
+                onClick={() => setSelectedFaculty(null)}
+                className="close-btn"
+              >
                 <X className="icon" />
               </button>
             </div>
@@ -112,7 +74,9 @@ const Department = () => {
                     <h4>Specializations</h4>
                     <div className="specializations">
                       {selectedFaculty.specialization.map((spec, index) => (
-                        <span key={index} className="spec">{spec}</span>
+                        <span key={index} className="spec">
+                          {spec}
+                        </span>
                       ))}
                     </div>
                   </div>
@@ -126,4 +90,4 @@ const Department = () => {
   );
 };
 
-export default Department;
+export default FacultyList;
