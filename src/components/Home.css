@@ -26,10 +26,13 @@
 }
 
 .highlight {
-  background: linear-gradient(to right, brown, brown);
-  -webkit-background-clip: text;
+  background: linear-gradient(to right, #8b4513, #a0522d); /* two shades of brown */
+  background-clip: text;          /* Standard */
+  -webkit-background-clip: text;  /* WebKit browsers */
   -webkit-text-fill-color: transparent;
+  color: transparent; /* fallback */
 }
+
 
 .hero-subtitle {
   font-size: 1.25rem;

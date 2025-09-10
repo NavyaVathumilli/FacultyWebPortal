@@ -76,7 +76,7 @@ const Login = ({ onBack }) => {
               <input id="remember-me" name="remember-me" type="checkbox" />
               <label htmlFor="remember-me">Remember me</label>
             </div>
-            <a href="#" className="forgot-link">Forgot password?</a>
+            <a href="/" className="forgot-link">Forgot password?</a>
           </div>
 
           <button type="submit" className="submit-btn">Sign In</button>
