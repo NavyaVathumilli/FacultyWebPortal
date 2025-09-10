@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Clock, Mail, Phone, MapPin, Edit3, Save, X, GraduationCap, LogOut } from 'lucide-react';
+import { User, Clock, Mail, Phone, MapPin, Edit3, Save, X } from 'lucide-react';
 import { useAuth } from './AuthContext';
 import { Link } from 'react-router-dom';
 import './FacultyDashboard.css';
