@@ -23,7 +23,7 @@ const Home = () => {
             <div className="quick-actions">
               <Link to="/faculty" className="card card-blue">
                 <div className="card-content">
-                  <div className="icon-wrapper blue">
+                  <div className="icon-wrapper white">
                     <Users className="icon" />
                   </div>
                   <h3 className="card-title">Faculty List</h3>
@@ -39,7 +39,7 @@ const Home = () => {
 
               <Link to="/dept" className="card card-indigo">
                 <div className="card-content">
-                  <div className="icon-wrapper indigo">
+                  <div className="icon-wrapper white">
                     <Building2 className="icon" />
                   </div>
                   <h3 className="card-title">Departments</h3>
@@ -55,7 +55,7 @@ const Home = () => {
 
               <Link to="/login" className="card card-emerald">
                 <div className="card-content">
-                  <div className="icon-wrapper emerald">
+                  <div className="icon-wrapper white">
                     <LogIn className="icon" />
                   </div>
                   <h3 className="card-title">Faculty Login</h3>
@@ -78,9 +78,6 @@ const Home = () => {
         <div className="features-content">
           <div className="text-center mb-16">
             <h2 className="features-title">Portal Features</h2>
-            <p className="features-subtitle">
-              Discover the comprehensive features designed to enhance your academic experience
-            </p>
           </div>
 
           <div className="features-grid">

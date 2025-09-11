@@ -90,7 +90,7 @@
 }
 
 .form-group input:focus {
-  border-color: #ef4444;
+  border-color: brown;
   box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
   outline: none;
 }
@@ -139,15 +139,13 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: #fff;
-  background-color: #dc2626;
+  background-color: brown;
   cursor: pointer;
   transition: background-color 0.2s;
 }
-
 .submit-btn:hover {
-  background-color: #b91c1c;
+  background-color: brown;
 }
-
 .support {
   text-align: center;
   margin-top: 1.5rem;

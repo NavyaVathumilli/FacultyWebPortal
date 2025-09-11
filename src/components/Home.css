@@ -19,14 +19,14 @@
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #111827;
   margin-bottom: 1.5rem;
 }
 
 .highlight {
-  background: linear-gradient(to right, #8b4513, #a0522d); /* two shades of brown */
+  background: linear-gradient(to right, brown, brown); /* two shades of brown */
   background-clip: text;          /* Standard */
   -webkit-background-clip: text;  /* WebKit browsers */
   -webkit-text-fill-color: transparent;
@@ -64,7 +64,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 12px rgba(10, 10, 10, 0.1);
   transform: translateY(-4px);
 }
 
@@ -131,7 +131,7 @@
 /* Features Section */
 .features {
   background: white;
-  padding: 5rem 1rem;
+  padding: 0% 1rem;
 }
 
 .features-content {
@@ -144,13 +144,6 @@
   font-weight: bold;
   color: #111827;
   margin-bottom: 1rem;
-}
-
-.features-subtitle {
-  color: #4b5563;
-  max-width: 600px;
-  margin: auto;
-  margin-bottom: 4rem;
 }
 
 .features-grid {

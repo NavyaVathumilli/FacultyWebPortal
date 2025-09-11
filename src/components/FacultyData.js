@@ -2,7 +2,7 @@ export const facultyData = [
   {
     id: 1,
     name: 'Dr. Sarah Johnson',
-    department: 'Computer Science & Engineering',
+    department: 'Agriculture',
     designation: 'Professor & Head',
     email: 'sarah.johnson@university.edu',
     phone: '+1 (555) 123-4567',
@@ -16,7 +16,7 @@ export const facultyData = [
   {
     id: 2,
     name: 'Dr. Michael Chen',
-    department: 'Computer Science',
+    department: 'Computer Science & Engineering',
     designation: 'Associate Professor',
     email: 'michael.chen@university.edu',
     phone: '+1 (555) 234-5678',
@@ -44,7 +44,7 @@ export const facultyData = [
   {
     id: 4,
     name: 'Dr. James Wilson',
-    department: 'Physics',
+    department: 'Agriculture',
     designation: 'Associate Professor',
     email: 'james.wilson@university.edu',
     phone: '+1 (555) 456-7890',
@@ -58,7 +58,7 @@ export const facultyData = [
   {
     id: 5,
     name: 'Dr. Lisa Anderson',
-    department: 'Mathematics',
+    department: 'Agriculture',
     designation: 'Assistant Professor',
     email: 'lisa.anderson@university.edu',
     phone: '+1 (555) 567-8901',
@@ -82,7 +82,92 @@ export const facultyData = [
     specialization: ['Astrophysics', 'Cosmology', 'Space Science'],
     education: 'Ph.D. Physics, NASA/JPL',
     experience: '20 years'
+  },
+  {
+    id: 7,
+    name: 'Dr. Sarah Johnson',
+    department: 'Computer Science & Engineering',
+    designation: 'Professor & Head',
+    email: 'sarah.johnson@university.edu',
+    phone: '+1 (555) 123-4567',
+    office: 'CS Building, Room 301',
+    availability: 'Available',
+    image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400',
+    specialization: ['Artificial Intelligence', 'Machine Learning', 'Data Science'],
+    education: 'Ph.D. Computer Science, MIT',
+    experience: '15 years'
+  },
+  {
+    id: 8,
+    name: 'Dr. Michael Chen',
+    department: 'Computer Science & Engineering',
+    designation: 'Associate Professor',
+    email: 'michael.chen@university.edu',
+    phone: '+1 (555) 234-5678',
+    office: 'CS Building, Room 205',
+    availability: 'In Meeting',
+    image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400',
+    specialization: ['Software Engineering', 'Web Development', 'Database Systems'],
+    education: 'Ph.D. Computer Science, Stanford',
+    experience: '12 years'
+  },
+  {
+    id: 9,
+    name: 'Dr. Emily Davis',
+    department: 'Mathematics',
+    designation: 'Professor',
+    email: 'emily.davis@university.edu',
+    phone: '+1 (555) 345-6789',
+    office: 'Math Building, Room 402',
+    availability: 'Available',
+    image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=400',
+    specialization: ['Applied Mathematics', 'Statistics', 'Numerical Analysis'],
+    education: 'Ph.D. Mathematics, Harvard',
+    experience: '18 years'
+  },
+  {
+    id: 10,
+    name: 'Dr. James Wilson',
+    department: 'Architecture',
+    designation: 'Associate Professor',
+    email: 'james.wilson@university.edu',
+    phone: '+1 (555) 456-7890',
+    office: 'Physics Building, Room 103',
+    availability: 'Busy',
+    image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400',
+    specialization: ['Quantum Physics', 'Theoretical Physics', 'Particle Physics'],
+    education: 'Ph.D. Physics, Caltech',
+    experience: '10 years'
+  },
+  {
+    id: 11,
+    name: 'Dr. Lisa Anderson',
+    department: ' Agriculture',
+    designation: 'Assistant Professor',
+    email: 'lisa.anderson@university.edu',
+    phone: '+1 (555) 567-8901',
+    office: 'Math Building, Room 205',
+    availability: 'Available',
+    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400',
+    specialization: ['Algebra', 'Number Theory', 'Cryptography'],
+    education: 'Ph.D. Mathematics, Princeton',
+    experience: '6 years'
+  },
+  {
+    id: 12,
+    name: 'Dr. Robert Garcia',
+    department: 'Arts',
+    designation: 'Professor',
+    email: 'robert.garcia@university.edu',
+    phone: '+1 (555) 678-9012',
+    office: 'Physics Building, Room 301',
+    availability: 'Out of Office',
+    image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400',
+    specialization: ['Astrophysics', 'Cosmology', 'Space Science'],
+    education: 'Ph.D. Physics, NASA/JPL',
+    experience: '20 years'
   }
+
 ];
 
 export const departments = [
